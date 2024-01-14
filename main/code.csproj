@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA669913-13DF-4937-8007-40C7CFFEEEC0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>code</RootNamespace>
+    <AssemblyName>code</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ESRI.ArcGIS.3DAnalyst">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF.Local, Version=10.8.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AxControls, Version=10.8.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.Carto">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Controls">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesFile, Version=10.8.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesGDB, Version=10.8.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesRaster, Version=10.8.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.8.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.8.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GlobeCore, Version=10.8.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Output, Version=10.8.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Version, Version=10.8.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="form\DlgLP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\DlgLP.Designer.cs">
+      <DependentUpon>DlgLP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\DlgSS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\DlgSS.Designer.cs">
+      <DependentUpon>DlgSS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\testcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\testcs.Designer.cs">
+      <DependentUpon>testcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="toolbarcontrol\addlayer.cs" />
+    <Compile Include="toolbarcontrol\cmdEditStart.cs" />
+    <Compile Include="toolbarcontrol\cmdEditStop.cs" />
+    <Compile Include="toolbarcontrol\cmdLP.cs" />
+    <Compile Include="toolbarcontrol\CreateFC.cs" />
+    <Compile Include="toolbarcontrol\CreateGDB.cs" />
+    <Compile Include="toolbarcontrol\CreateNewDocument.cs" />
+    <Compile Include="form\DlgCFC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\DlgCFC.Designer.cs">
+      <DependentUpon>DlgCFC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\DlgCGDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\DlgCGDB.Designer.cs">
+      <DependentUpon>DlgCGDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\DlgES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\DlgES.Designer.cs">
+      <DependentUpon>DlgES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditEnvSingleton.cs" />
+    <Compile Include="form\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\GISApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\GISApp.Designer.cs">
+      <DependentUpon>GISApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="toolbarcontrol\kj.cs" />
+    <Compile Include="toolbarcontrol\OpenDocument.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="toolbarcontrol\RemoveLayers.cs" />
+    <Compile Include="toolbarcontrol\SaveAsDocument.cs" />
+    <Compile Include="toolbarcontrol\FullExtent.cs" />
+    <Compile Include="toolbarcontrol\shuxing.cs" />
+    <Compile Include="toolbarcontrol\ToolAD.cs" />
+    <Compile Include="toolbarcontrol\ZoomIn.cs" />
+    <EmbeddedResource Include="form\DlgCFC.resx">
+      <DependentUpon>DlgCFC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\DlgCGDB.resx">
+      <DependentUpon>DlgCGDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\DlgES.resx">
+      <DependentUpon>DlgES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\DlgLP.resx">
+      <DependentUpon>DlgLP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\DlgSS.resx">
+      <DependentUpon>DlgSS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\GISApp.resx">
+      <DependentUpon>GISApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\testcs.resx">
+      <DependentUpon>testcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\OpenDocument.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\SaveAsDocument.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\CreateNewDocument.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="cur\ZoomIn.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\ZoomIn.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\FullExtent.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\shuxing.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="cur\kj.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\kj.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\addlayer.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\CreateFC.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\cmdEditStart.bmp" />
+    <EmbeddedResource Include="img\cmdEditStop.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\CreateGDB.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\cmdLP.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="cur\ToolAD.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\CF.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
